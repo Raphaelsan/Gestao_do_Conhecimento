@@ -12,5 +12,7 @@ class Funcionario(models.Model):
    salario = models.DecimalField(max_digits=10, decimal_places=2)
    competencias = models.TextField()
    supervisor = models.ForeignKey('self', on_delete=models.SET_NULL, null=True, blank=True)
-   foto = models.ImageField(upload_to='funcionarios/', null=True, blank=True)    
+   foto = models.ImageField(upload_to='funcionarios/', null=True, blank=True)   
+   def __str__(self):
+        return self.nome 
 
