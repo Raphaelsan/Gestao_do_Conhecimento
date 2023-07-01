@@ -16,7 +16,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-
+from gestap.views import listagem #home,
+ 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    #path('home/', home),
+    path('', listagem , name='lista_funcionarios'),
+
+
 ]
