@@ -10,7 +10,7 @@ class Funcionario(models.Model):
    data_nascimento = models.DateField()
    data_admissao = models.DateField()
    salario = models.DecimalField(max_digits=10, decimal_places=2)
-   competências = models.TextField()
+   competencias = models.TextField()
    supervisor = models.ForeignKey('self', on_delete=models.SET_NULL, null=True, blank=True)
-   foto = models.ImageField(upload_to='funcionarios/', null=True, blank=True) 
+   foto = models.ImageField(upload_to='funcionarios/', null=True, blank=True)    
 
